@@ -1,0 +1,215 @@
+@media (max-width: 1440px) {
+    body, html {
+        font-family: 'Roboto', sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .background {
+        background-color: #36384D; /* Cor de fundo azul Marinho */
+        width: 100%; /* Largura da div */
+        height: 100%; /* Altura da div */
+        padding: 20px; /* Espaçamento interno */
+        box-sizing: border-box; /* Para incluir preenchimento e borda na largura e altura total */
+    }
+
+    .background_form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        background-color: #fff;
+        width: 50%; /* Exemplo de largura relativa */
+        height: 80vh; /* Exemplo de altura em relação à altura do viewport */
+        padding: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 20px 0 #000;   
+    }
+
+    .left_column {
+        width: 90%;
+        height: 90%; /* Define a largura da .left_column em relação à largura do .background_form */
+        margin-left: 14%; /* Define a margem esquerda em relação à largura do .background_form */
+    }
+
+    .right_column {
+        width: 90%; /* Defina a largura desejada para a coluna esquerda */
+        height: 100%;   
+        justify-self: end; 
+    }
+
+    svg {
+        width: 100%; /* Defina a largura do SVG como 100% da largura da coluna esquerda */
+        height: 100%; /* Para manter a proporção do SVG */
+    }
+
+    .title {
+        display: flex;
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: #000;    
+        justify-content: center;
+        align-items: center;
+        margin-top: 15%;
+    }
+
+    .sub_title {
+        display: flex;
+        font-weight: normal;
+        font-size: 0.8rem;
+        color: #000;    
+        justify-content: center;
+        margin-top: 28px;
+    }
+
+    .options {
+        margin-top: 30px;
+    }
+
+    .options_list {
+        display: grid;
+        grid-template-columns: 1fr 11fr;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .icon_check {
+        display: flex;
+    }
+
+    .option_text {
+        display: flex;    
+        font-weight: lighter;
+        font-size: 0.8rem;
+        color: #000;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .form {
+        width: 100%;
+        bottom: 60px; /* Alinha o formulário à base da div pai */
+        margin-top: 5%;
+    }
+
+    .label_email {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;   
+        color: #000;
+        font-weight: bold;
+        font-size: 0.6rem;
+        margin-bottom: 5px;
+    }
+
+    .errorMessage {
+        display: flex;
+        visibility: hidden;
+        color: red;
+        margin: 0px;
+        justify-content: flex-end;
+    }
+
+    .email_input {
+        width: 96%;
+        height: 50px;
+        border-width: 1px;
+        border-radius: 8px;
+        border-color: #c2c2c2;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding: none;
+    }
+
+    .email_box {
+        padding-left: 0px;
+    }
+
+    .email-box {
+        display: block; /* Exibir a div como um bloco para que fique abaixo da anterior */
+        margin-bottom: 10px; /* Adiciona espaçamento entre as divs */
+    }
+
+    .btn_submit {
+        display: block;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: bold;
+        width: 100%;
+        height: 45px;
+        border-radius: 8px;
+        border: none;
+        background-color: #010734;
+        cursor: pointer;
+        transition: background-color 0.2s linear; /* Adicione transition para background-color */
+    }
+
+    .btn_submit.active {
+        background-color: hsl(4, 100%, 67%); /* Define a cor de fundo vermelha para o botão quando ativo */
+        transition:background-color 0.3s ease;
+    }
+
+    .invalid {
+        border: 1px solid red; /* Pinta a borda de vermelho */
+    }
+
+    .email_input::placeholder.invalid {
+        color: red; /* Muda a cor do placeholder para vermelho */
+    }
+
+    input:checked {
+        border-color: red; /* Define a cor da borda para vermelho quando o campo recebe foco */
+        border-width: 1px;
+    }
+
+    .email_input:focus {
+        outline: none;
+    }
+
+    .email_div.selected {
+        border-color: red;
+        border-width: 1px;
+    }
+}
+
+@media (max-width: 375px) {
+    .background {
+        background-color: #fff; /* Cor de fundo azul Marinho */
+        width: 100%; /* Largura da div */
+        height: 100%; /* Altura da div */
+        padding: 20px; /* Espaçamento interno */
+        box-sizing: border-box; /* Para incluir preenchimento e borda na largura e altura total */
+    }
+    
+    .background_form {
+        display: flex;
+        background-color: #fff;
+        width: 100%; /* Ajustando a largura */
+        box-shadow: none;
+        align-items: flex-end;
+        margin-top: 10%;
+  
+    }
+
+    .left_column {
+        width: 100%; /* Largura total */
+        margin: 0px 0px 0px 20px;
+    }
+
+    .right_column {
+        display: none;
+        width: 100%; /* Largura total */
+        height: auto; /* Altura automática */
+        justify-self: end; 
+        margin-bottom: 20px; /* Adicionando margem inferior */
+    }
+
+    .title {
+        margin-top: 0px;
+    }
+}
+

@@ -1,0 +1,109 @@
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1440px) {
+  .background {
+    background-color: #36384d; /* Cor de fundo azul Marinho */
+    width: 100%; /* Largura da div */
+    height: 100%; /* Altura da div */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Para incluir preenchimento e borda na largura e altura total */
+  }
+  
+  .background_success {
+    background-color: #fff;
+    width: 25%; /* Exemplo de largura relativa */
+    height: 65vh; /* Exemplo de altura em relação à altura do viewport */
+    padding: 20px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px 0 #000;
+  }
+  
+  .information {
+    width: 85%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+  
+  .title {
+    display: flex;
+    font-weight: bold;
+    font-size: 42px;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+  }
+  
+  .text_information {
+    font-weight: normal;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.2;
+    width: 90%;
+    justify-content: center;
+    margin-top: 18px;
+  }
+  
+  .button_dimiss {
+    display: block;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10%;
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    background-color: #010734;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adicione transition para background-color */
+  }
+  
+  .button_dimiss.clicked {
+    background-color: hsl(4, 100%, 67%); /* Define a cor de fundo vermelha para o botão quando ativo */
+  }
+}
+
+@media (max-width: 375px) {
+  .background {
+    background-color: #fff; /* Cor de fundo azul Marinho */
+    width: 100%; /* Largura da div */
+    height: 100%; /* Altura da div */
+    padding: 0px; /* Espaçamento interno */
+    box-sizing: border-box; /* Para incluir preenchimento e borda na largura e altura total */
+  }
+
+  .background_success {
+    background-color: #fff;
+    width: 100%; /* Exemplo de largura relativa */
+    height: 100%; /* Exemplo de altura em relação à altura do viewport */
+    box-shadow: none;
+    padding: 0px;
+  }
+
+  .button_dimiss {
+    margin-top: 50%;    
+  }
+
+  .text_information {
+    margin-top: 5%;
+  }
+
+  .information {
+    width: 85%;
+    height: auto;
+    margin-left: 8%;
+    margin-top: 10%;
+  }
+}
